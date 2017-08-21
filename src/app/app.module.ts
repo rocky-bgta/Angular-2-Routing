@@ -8,6 +8,7 @@ import { UserEditComponent } from "./user/user-edit.component";
 import { HomeComponent } from "./home-component.component";
 import {routing} from "./app.routes";
 import {UserDetailGuard} from "./user/user-detail.guard";
+import {UserEditGuard} from "./user/user-edit.guard";
 
 
 
@@ -19,7 +20,7 @@ import {UserDetailGuard} from "./user/user-detail.guard";
         UserEditComponent,
         HomeComponent,
     ],
-    providers:[UserDetailGuard],
+    providers:[UserDetailGuard, UserEditGuard],
     imports: [BrowserModule, routing],
     bootstrap: [AppComponent]
 })
